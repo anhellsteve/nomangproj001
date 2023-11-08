@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'nomangproj001';
@@ -16,27 +16,27 @@ export class AppComponent {
   sitio = 'https://www.google.com';
   contador = 1;
 
-  esActivo(){
-    if(this.activo){
+  esActivo() {
+    if (this.activo) {
       return 'Trabajador Activo';
-    }else{
+    } else {
       return 'Trabajador Inactivo';
     }
   }
 
-  ultimos3Salario(){
+  ultimos3Salario() {
     let suma = 0;
-    for(let i = 0; i < this.salario.length; i++) {
-      suma+=this.salario[i];
+    for (let i = 0; i < this.salario.length; i++) {
+      suma += this.salario[i];
     }
     return suma;
   }
-  
-  incrementar(){
+
+  incrementar() {
     this.contador++;
   }
 
-  decrementar(){
+  decrementar() {
     this.contador--;
   }
 }

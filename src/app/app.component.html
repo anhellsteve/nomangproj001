@@ -1,47 +1,45 @@
-<h1 style="text-align: center">
-  Bienvenido a {{title}}
-</h1>
-<br/>
-<br/>
+<h1 style="text-align: center">Bienvenido a {{ title }}</h1>
+<br />
+<br />
 <div>
-  <p>Ingrese Nombre: <input type="text" [(ngModel)]="nombre"></p>
-  <p>Ingrese apellido: <input type="text" [(ngModel)]="apellido"></p>
+  <p>Ingrese Nombre: <input type="text" [(ngModel)]="nombre" /></p>
+  <p>Ingrese apellido: <input type="text" [(ngModel)]="apellido" /></p>
 </div>
-<p>Nombre del Empleado: {{nombre}} {{apellido}}</p>
-<p>Edad: {{edad}}</p>
+<p>Nombre del Empleado: {{ nombre }} {{ apellido }}</p>
+<p>Edad: {{ edad }}</p>
 <p>
   El Empleado dentro de 5 años tendrá:
-  {{edad+5}}
+  {{ edad + 5 }}
 </p>
-<p *ngIf="edad>=18; else menor">Es mayor de edad.</p>
+<p *ngIf="edad >= 18; else menor">Es mayor de edad.</p>
 <ng-template #menor>
   <p>Es menor de edad.</p>
 </ng-template>
-<p>E-Mail: {{email}}</p>
+<p>E-Mail: {{ email }}</p>
 <p>
   Los últimos 3 Salarios son:
-  {{salario[0]}}, {{salario[1]}} y {{salario[2]}}
+  {{ salario[0] }}, {{ salario[1] }} y {{ salario[2] }}
 </p>
 <table border="1">
   <tr>
     <td>Salarios</td>
   </tr>
   <tr *ngFor="let sueldo of salario">
-    <td>{{sueldo}}</td>
+    <td>{{ sueldo }}</td>
   </tr>
 </table>
 <p>
   En los últimos 3 meses ha ganado:
-  {{ultimos3Salario()}}
-  {{salario[0]+salario[1]+salario[2]}}
+  {{ ultimos3Salario() }}
+  {{ salario[0] + salario[1] + salario[2] }}
 </p>
-<p>{{esActivo()}}</p>
-<br/>
-<a href="{{sitio}}">Gana un Iphone 15 PRO</a>
-<br/>
-<br/>
+<p>{{ esActivo() }}</p>
+<br />
+<a href="{{ sitio }}">Gana un Iphone 15 PRO</a>
+<br />
+<br />
 <div>
-  <p>Contador: {{contador}}</p>
+  <p>Contador: {{ contador }}</p>
   <button (click)="incrementar()">+1</button>
   <button (click)="decrementar()">-1</button>
 </div>
